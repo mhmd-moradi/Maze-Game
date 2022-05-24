@@ -83,6 +83,14 @@ window.onload=function(){
         score_board.innerText = "Score: " + score;
     }
 
+    function turns_red(boundary){
+        boundary.classList.add("youlose");
+    }
+
+    function turns_green(boundary){
+        boundary.style.backgroundColor = 'green';
+    }
+    
     start_game();
 
 }
