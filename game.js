@@ -90,7 +90,11 @@ window.onload=function(){
     function turns_green(boundary){
         boundary.style.backgroundColor = 'green';
     }
-    
+
+    function show_message(message){
+            status.innerText = message;
+    }
+
     start_game();
 
 }
