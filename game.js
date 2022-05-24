@@ -39,6 +39,11 @@ window.onload=function(){
         playing = true;
     }
 
+    function reset_boundaries_background(boundary){
+        boundary.classList.remove("youlose");
+        boundary.style.backgroundColor = grey_background;
+    }
+
     start_game();
 
 }
