@@ -139,6 +139,17 @@ window.onload=function(){
         live_element.innerHTML = `${m}:${s}:${ms}`;
     }
 
+    function start_timer(){
+        milliseconds = 0;
+        seconds = 0;
+        minutes = 0;
+        timer = setInterval(displayTimer,100);
+    }
+
+    function stop_timer(){
+        clearInterval(timer);
+    }
+
     start_game();
 
 }
