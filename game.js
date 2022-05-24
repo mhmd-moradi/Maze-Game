@@ -44,6 +44,13 @@ window.onload=function(){
         boundary.style.backgroundColor = grey_background;
     }
 
+    function track_cursor(){
+        reset_game();
+        boundaries.forEach(lost);
+        start_timer();
+        end_btn.addEventListener("mouseenter", win)
+    }
+
     start_game();
 
 }
