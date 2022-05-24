@@ -122,6 +122,23 @@ window.onload=function(){
         best_element.innerText = "0:0:0";
     }
 
+    function displayTimer(){
+        milliseconds+=100;
+        if(milliseconds == 1000){
+            milliseconds = 0;
+            seconds++;
+            if(seconds == 60){
+                seconds = 0;
+                minutes++;
+            }
+        }
+        let m = minutes;
+        let s = seconds;
+        let ms = (""+milliseconds).slice(0, -2); 
+    
+        live_element.innerHTML = `${m}:${s}:${ms}`;
+    }
+
     start_game();
 
 }
