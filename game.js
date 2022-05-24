@@ -74,6 +74,15 @@ window.onload=function(){
         })
     }
 
+    function update_score(gaming_status){
+        if(gaming_status === 'l')
+            score -= 10;
+        else 
+            score += 5
+
+        score_board.innerText = "Score: " + score;
+    }
+
     start_game();
 
 }
