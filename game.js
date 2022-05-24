@@ -25,4 +25,14 @@ window.onload=function(){
 
     var best = [9999999,9999999,9999999];
 
+    function start_game(){
+        enable_cheating_detection();
+        score_board.innerText = "Score: " + score;
+        game_title.innerHTML += "<br>(Double Click ON 'S' To Restart)";
+        start_btn.addEventListener("mouseenter", track_cursor);
+        start_btn.addEventListener("dblclick", restart_game);
+    }
+
+    start_game();
+
 }
