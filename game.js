@@ -33,6 +33,12 @@ window.onload=function(){
         start_btn.addEventListener("dblclick", restart_game);
     }
 
+    function reset_game(){
+        boundaries.forEach(reset_boundaries_background);
+        status.innerText = "Playing Now";
+        playing = true;
+    }
+
     start_game();
 
 }
