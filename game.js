@@ -99,6 +99,18 @@ window.onload=function(){
         playing = false;
     }
 
+    //if user hovers outside game zone while playing
+    function enable_cheating_detection(){
+        game_zone.addEventListener("mouseleave", function(){
+            if(playing)
+            {
+                alert("Please stay in the game zone");
+                pause_game();
+                stop_timer();
+            }
+        })
+    }
+
     start_game();
 
 }
