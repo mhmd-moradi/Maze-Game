@@ -51,6 +51,17 @@ window.onload=function(){
         end_btn.addEventListener("mouseenter", win)
     }
 
+    function win(){
+        if(playing){
+            boundaries.forEach(turns_green);
+            update_score('w');
+            show_message("You Won");
+            pause_game();
+            stop_timer();
+            set_last_best();
+        }
+    }
+
     start_game();
 
 }
