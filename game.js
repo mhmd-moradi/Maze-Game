@@ -150,6 +150,18 @@ window.onload=function(){
         clearInterval(timer);
     }
 
+    //set last and best round times
+    function set_last_best(){
+        var last_time = `${minutes}:${seconds}:${(""+milliseconds).slice(0, -2)}`;
+        var best_time = `${best[0]}:${best[1]}:${(""+best[2]).slice(0, -2)}`;
+        last_element.innerHTML = last_time;
+        console.log(minutes, " ", seconds, " ", milliseconds)
+        if(last_time < best_time){
+            best = [minutes, seconds, milliseconds];
+            best_element.innerHTML = last_time;
+        }
+    }
+
     start_game();
 
 }
