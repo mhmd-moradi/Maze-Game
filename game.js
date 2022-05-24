@@ -111,6 +111,17 @@ window.onload=function(){
         })
     }
 
+    function restart_game(){
+        score = 0;
+        score_board.innerText = "Score: " + score;
+        stop_timer();
+        best = [9999999,9999999,9999999];
+        start_timer();
+        live_element.innerText = "0:0:0";
+        last_element.innerText = "0:0:0";
+        best_element.innerText = "0:0:0";
+    }
+
     start_game();
 
 }
