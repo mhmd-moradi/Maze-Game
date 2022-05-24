@@ -62,6 +62,18 @@ window.onload=function(){
         }
     }
 
+    function lost(boundary){
+        boundary.addEventListener("mouseenter", function(){
+            if(playing){
+                boundaries.forEach(turns_red);
+                update_score('l');
+                show_message("You Lose");
+                pause_game();
+                stop_timer();
+            }
+        })
+    }
+
     start_game();
 
 }
