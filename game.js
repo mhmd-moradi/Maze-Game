@@ -95,6 +95,10 @@ window.onload=function(){
             status.innerText = message;
     }
 
+    function pause_game(){
+        playing = false;
+    }
+
     start_game();
 
 }
